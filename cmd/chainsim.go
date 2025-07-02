@@ -1,8 +1,10 @@
 package main
 
 import (
-	"chainsim/core"
+	"github.com/PrajwalKhot14/ChainSim/core"
 	"fmt"
+	"time"
+
 	"github.com/google/uuid"
 )
 
@@ -13,7 +15,7 @@ func main() {
 		ID:        uuid.New().String(),
 		Product:   core.PriceFeed,
 		Status:    core.NodeStatusRunning,
-		StartTime: core.Now(),
+		StartTime: time.Now(),
 		SLIMetrics: core.SLIMetrics{
 			Uptime:    99.9,
 			LatencyMs: 120,
